@@ -64,6 +64,19 @@ p + p {
     	padding: 7.5px 11px;
     	border-radius: 3px;
     	white-space: nowrap;
+		transition: all 0.5s ease;
+		font-size: 14px;
+		&:hover {
+			background: rgba(#013C80, 0.4);
+			transform: scale(0.99);
+			margin: 0 2px;
+		}
+		&:first-child {
+			margin-left: 0px;
+		}
+		&:last-child {
+			margin-right: 0px;
+		}
 	}
 
 	&__nav-ext-link {
@@ -104,10 +117,21 @@ p + p {
 
 	&__nav-int-item {
 		white-space: nowrap;
+		position: relative;
+		transition: all 0.6s ease;
+		&:hover {
+			transform: scale(1.03);
+			margin: 0 8px;
+		}
 	}
 
 	&__nav-int-link {
 		color: white;
+		font-size: 20px;
+		transition: all 1s ease;
+		&--selected {
+			color: #0F0F14;
+		}
 	}
 
 	&__body {
@@ -144,6 +168,65 @@ p + p {
 		position: absolute;
 		right: 0;
 		bottom: 42px;
+	}
+
+	&__nav-int-menu-wrap {
+		position: absolute;
+		left: 50%;
+		width: 317px;
+		overflow: hidden;
+		line-height: 0px;
+		padding-top: 0.3lh;
+		max-height: 0px;
+		.header__nav-int-menu-link {
+			color: transparent;
+			transition: color 1s ease;
+		}
+		color: transparent;
+		transform: translateX(-50%);
+		transition: all 0.25s;
+		
+		&--open {
+			transition: 
+					line-height 0.6s cubic-bezier(.37,0,.25,.99), 
+					max-height 0.6s cubic-bezier(.37,0,.25,.99),
+					transform 0.6s cubic-bezier(.37,0,.25,.99);
+			line-height: 19px;
+			max-height: 445px;
+			.header__nav-int-menu-link {
+				color: #0F0F14;
+			}
+		}
+	}
+
+	&__nav-int-menu {
+		display: flex;
+		flex-direction: column;
+		background-position: center;
+		background-position: top;
+		background-color: #fff;
+		padding: 60px 40px;
+		margin-top: 20px;
+		font-size: 16px;
+		font-weight: 700;
+		gap: 30px;
+	}
+
+	&__nav-int-menu-link {
+		color: #0F0F14;
+		transition: all .05s;
+		&:hover {
+			color: #0168B2;
+		}
+	}
+
+	&__triangle {
+		margin-top: 20px;
+		width: 41px;
+		height: 14.25px;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -85%);
 	}
 }
 
@@ -360,6 +443,10 @@ p + p {
 	height: 295px;
 	border-radius: 5px;
 	position: relative;
+	transition: box-shadow .3s;
+	&:hover {
+		box-shadow: 0 0 24px rgba(0, 0, 0, 16%);
+	}
 
 	&__inner {
 		position: absolute;
@@ -428,6 +515,10 @@ p + p {
 .block-fancy {
 	color: white;
 	position: relative;
+	transition: box-shadow .3s;
+	&:hover {
+		box-shadow: 0 0 24px rgba(0, 0, 0, 16%);
+	}
 
 	&__inner {
 		display: flex;
@@ -558,5 +649,3 @@ p + p {
 		text-decoration: underline;
 	}
 }
-
-
