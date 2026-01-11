@@ -1,27 +1,27 @@
 function showMenu(element) {
-    const parentLi = element.closest('.header__nav-int-item');
+    const parentLi = element.closest('.nav-int__item');
 
-    const currentSubMenu = parentLi.querySelector('.header__nav-int-menu-wrap');
-    const currentLink = parentLi.querySelector('.header__nav-int-link');
+    const currentSubMenu = parentLi.querySelector('.nav-int__menu-wrap');
+    const currentLink = parentLi.querySelector('.nav-int__link');
     
     if (currentSubMenu) {
-        currentSubMenu.classList.add("header__nav-int-menu-wrap--open");
+        currentSubMenu.classList.add("nav-int__menu-wrap--open");
     }
     if (currentLink) {
-        currentLink.classList.add("header__nav-int-link--selected");
+        currentLink.classList.add("nav-int__link--selected");
     }
 }
 
 function hideMenu(element) {
-    const parentLi = element.closest('.header__nav-int-item');
+    const parentLi = element.closest('.nav-int__item');
 
-    const currentSubMenu = parentLi.querySelector('.header__nav-int-menu-wrap');
-    const currentLink = parentLi.querySelector('.header__nav-int-link');
+    const currentSubMenu = parentLi.querySelector('.nav-int__menu-wrap');
+    const currentLink = parentLi.querySelector('.nav-int__link');
     
     if (currentSubMenu) {
-        currentSubMenu.classList.remove("header__nav-int-menu-wrap--open");
+        currentSubMenu.classList.remove("nav-int__menu-wrap--open");
     }
     if (currentLink) {
-        currentLink.classList.remove("header__nav-int-link--selected");
+        currentLink.classList.remove("nav-int__link--selected");
     }
 }
