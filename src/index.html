@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Филиал Губкинского университета в Атырау</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -72,7 +72,7 @@
                                     <ul class="nav-int__list">
                                         <li class="nav-int__item">
                                             <a class="nav-int__link" href="#" onmouseover="showMenu(this)"
-                                                onmouseleave="hideMenu(this)">
+                                                onmouseleave="hideMenu(this)" aria-expanded="false" aria-controls="list">
                                                 Поступающим
                                             </a>
                                             <div class="nav-int__menu-wrap" onmouseover="showMenu(this)"
@@ -80,7 +80,7 @@
                                                 <div class="nav-int__triangle">
                                                     <img src="icons/triangle.svg" alt="">
                                                 </div>
-                                                <ul class="nav-int__menu" onmouseleave="hideMenu(this)">
+                                                <ul class="nav-int__menu" onmouseleave="hideMenu(this)" aria-hidden="true">
                                                     <li class="nav-int__menu-item">
                                                         <a class="nav-int__menu-link" href="#">
                                                             <p>Приёмная комиссия</p>
@@ -101,7 +101,7 @@
                                         </li>
                                         <li class="nav-int__item">
                                             <a class="nav-int__link" href="#" onmouseenter="showMenu(this)"
-                                                onmouseleave="hideMenu(this)">
+                                                onmouseleave="hideMenu(this)" aria-expanded="false" aria-controls="list">
                                                 Образование
                                             </a>
                                             <div class="nav-int__menu-wrap" onmouseenter="showMenu(this)"
@@ -110,7 +110,7 @@
                                                     <img src="icons/triangle.svg" alt="">
                                                 </div>
                                                 <ul class="nav-int__menu" onmouseenter="showMenu(this)"
-                                                    onmouseleave="hideMenu(this)">
+                                                    onmouseleave="hideMenu(this)" aria-hidden="true">
                                                     <li class="nav-int__menu-item">
                                                         <a class="nav-int__menu-link" href="#">
                                                             <p>Факультеты и кафедры</p>
@@ -126,7 +126,7 @@
                                         </li>
                                         <li class="nav-int__item">
                                             <a class="nav-int__link" href="#" onmouseenter="showMenu(this)"
-                                                onmouseleave="hideMenu(this)">
+                                                onmouseleave="hideMenu(this)" aria-expanded="false" aria-controls="list">
                                                 Наука
                                             </a>
                                             <div class="nav-int__menu-wrap" onmouseenter="showMenu(this)"
@@ -135,7 +135,7 @@
                                                     <img src="icons/triangle.svg" alt="">
                                                 </div>
                                                 <ul class="nav-int__menu" onmouseenter="showMenu(this)"
-                                                    onmouseleave="hideMenu(this)">
+                                                    onmouseleave="hideMenu(this)" aria-hidden="true">
                                                     <li class="nav-int__menu-item">
                                                         <a class="nav-int__menu-link" href="#">
                                                             <p>Центры, лаборатории</p>
@@ -156,7 +156,7 @@
                                         </li>
                                         <li class="nav-int__item">
                                             <a class="nav-int__link" href="#" onmouseenter="showMenu(this)"
-                                                onmouseleave="hideMenu(this)">
+                                                onmouseleave="hideMenu(this)" aria-expanded="false" aria-controls="list">
                                                 О филиале
                                             </a>
                                             <div class="nav-int__menu-wrap" onmouseenter="showMenu(this)"
@@ -165,7 +165,7 @@
                                                     <img src="icons/triangle.svg" alt="">
                                                 </div>
                                                 <ul class="nav-int__menu" onmouseenter="showMenu(this)"
-                                                    onmouseleave="hideMenu(this)">
+                                                    onmouseleave="hideMenu(this)" aria-hidden="true">
                                                     <li class="nav-int__menu-item">
                                                         <a class="nav-int__menu-link" href="history.html">
                                                             <p>История</p>
@@ -544,9 +544,6 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="footer__pattern">
-                <img src="img/ram_fragment.svg" alt="ram_pattern">
-            </div>
             <div class="footer__contacts">
                 <div class="container">
                     <h2 class="footer__title">Контакты</h2>

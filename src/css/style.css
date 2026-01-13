@@ -9,7 +9,7 @@
 }
 
 .container {
-	max-width: 1260px;
+	max-width: 1270px;
 	padding: 0 15px;
 	margin: 0 auto;
 	height: 100%;
@@ -60,7 +60,6 @@ p + p {
 .nav-int__item:hover {
 	-webkit-transform: scale(1.03);
 	        transform: scale(1.03);
-	margin: 0 8px;
 }
 .nav-int__link {
 	color: white;
@@ -277,14 +276,14 @@ p + p {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	gap: 20px;
 }
 
 .person-card {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	max-width: 610px;
-	margin-right: 20px;
+	min-width: 610px;
 }
 .person-card__photo > img {
 	width: 181px;
@@ -292,13 +291,14 @@ p + p {
 }
 .person-card__content {
 	background-color: #F2FBFD;
-	font-size: 13px;
 	color: #0F0F14;
 	padding: 14px 22px;
-	line-height: 15px;
 	border-bottom-right-radius: 5px;
 	border-top-right-radius: 5px;
-	min-width: 385px;
+}
+.person-card__content p {
+	font-size: 13px;
+	line-height: 15px;
 }
 .person-card__name {
 	font-weight: 700;
@@ -307,10 +307,13 @@ p + p {
 .person-card__phrase {
 	margin-top: 5px;
 }
-.person-card:last-child {
-	margin-right: 0px;
-}
 
+@media (max-width: 1000px) {
+	.welcome-inner {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+}
 .events__heading {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -327,14 +330,8 @@ p + p {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	gap: 20px;
 }
-.events__item {
-	margin-right: 20px;
-}
-.events:last-child {
-	margin-right: 0px;
-}
-
 .events-inner {
 	padding-bottom: 60px;
 }
@@ -696,20 +693,14 @@ p + p {
 .footer {
 	position: relative;
 	height: 379px;
+	background: url("../img/ram_fragment.svg") center;
+	background-repeat: repeat-x;
+	background-position-y: 112px;
 }
 .footer__contacts-inner {
 	position: absolute;
 	margin-top: 48px;
 	z-index: 2;
-}
-.footer__pattern {
-	position: absolute;
-	overflow: hidden;
-	left: 50%;
-	top: 105px;
-	-webkit-transform: translateX(-50%);
-	        transform: translateX(-50%);
-	z-index: 1;
 }
 
 .contacts {
@@ -746,7 +737,9 @@ p + p {
 
 .header-page {
 	height: 364px;
-	background: #00A6C8;
+	background: url("../img/ram_fragment_page.svg") center, #00A6C8;
+	background-repeat: repeat-x;
+	background-position-y: 112px;
 	position: relative;
 }
 .header-page__top-inner {
@@ -773,15 +766,6 @@ p + p {
 	display: -ms-flexbox;
 	display: flex;
 	gap: 40px;
-}
-.header-page__pattern {
-	position: absolute;
-	left: 50%;
-	overflow: hidden;
-	top: 111px;
-	-webkit-transform: translateX(-50%);
-	        transform: translateX(-50%);
-	z-index: 1;
 }
 
 .history__content > img {
